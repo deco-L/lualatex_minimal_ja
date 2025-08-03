@@ -1,0 +1,9 @@
+# ignore directory
+
+# ignore file
+*.tex
+*.pdf
+*.log
+*.toc
+*.aux
+*.out

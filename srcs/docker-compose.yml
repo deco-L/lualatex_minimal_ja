@@ -1,0 +1,7 @@
+services:
+  texlive:
+    image: lualatex_minimal_ja
+    build: tex
+    container_name: texlive-minimal-ja
+    working_dir: /work
+
