@@ -6,16 +6,13 @@ COMPOSE = docker compose -f $(SRCDIR)/docker-compose.yml
 ##--------------------------##
 
 ##------Makefile rules------##
-all: build up exec
+all: build up 
 
 build:
 	$(COMPOSE) build
 
 up:
 	$(COMPOSE) up -d
-
-exec: up
-	docker run -it -v $(PWD)/srcs/documents:/work lualatex_minimal_ja bash
 
 down:
 	$(COMPOSE) down

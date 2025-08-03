@@ -4,4 +4,14 @@ services:
     build: tex
     container_name: texlive-minimal-ja
     working_dir: /work
+    volumes:
+      - documents:/work
 
+volumes:
+  documents:
+    name: documents
+    driver: local
+    driver_opts:
+      type: none
+      device: ./documents/ 
+      o: bind

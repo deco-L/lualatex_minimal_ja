@@ -21,3 +21,5 @@ RUN tlmgr install collection-langjapanese latexmk wrapfig tcolorbox here
 COPY ./compile.sh /usr/bin/compile
 RUN chmod +x /usr/bin/compile
 WORKDIR /work
+ENTRYPOINT ["compile"]
+

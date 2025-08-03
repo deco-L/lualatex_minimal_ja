@@ -1,0 +1,36 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     _          _____ __                     %
+%                    ____ ___  ____ _(_)___     / __(_) /__                   %
+%                   / __ `__ \/ __ `/ / __ \   / /_/ / / _ \                  %
+%                  / / / / / / /_/ / / / / /  / __/ / /  __/                  %
+%                 /_/ /_/ /_/\__,_/_/_/ /_/  /_/ /_/_/\___/                   %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt, report, a4j]{ltjsbook}
+% ltjsarticleだと\chapter{}が使えない.
+\input{package.tex}								% install package
+\input{command.tex}								% declare functions
+\input{thesis_cover.tex}					% declare cover_function
+
+\begin{document}
+	% 表紙作成.
+	\maketitle											% 表紙の出力.
+	\pagebreak											% 改ページ.
+
+	% 目次作成
+	\tableofcontents								% 目次作成.
+	\pagenumbering{roman}						% 目次のページ番号をローマ字に変更.
+	\clearpage											% 目次をページ番号に含まないようにする.
+	\pagenumbering{arabic}{\large}	% ページ番号.
+
+	% chapter
+	\input{chapter1.tex}						% chapter1
+	\input{chapter2.tex}						% chapter2
+	\input{chapter3.tex}						% chapter3
+	\input{chapter4.tex}						% chapter4
+	\input{chapter5.tex}						% chapter5
+	\input{chapter6.tex}						% chapter6
+	\input{acknowledgments.tex}			% 謝辞.
+	\input{references.tex}					% 参考文献.
+\end{document}
